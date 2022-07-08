@@ -47,6 +47,11 @@
 #welcome #nav-bar #nav-sections #nav-list a {
   text-decoration: none;
 }
+@media screen and (max-width: 800px) {
+  #welcome #nav-bar #nav-sections #nav-list {
+    display: none;
+  }
+}
 #welcome #nav-bar #nav-sections #hamburger {
   font-size: 1.5rem;
   padding: 0.5em 2rem;
@@ -58,6 +63,12 @@
   top: 0;
   transform: scaleY(0%);
   opacity: 0;
+}
+@media screen and (max-width: 800px) {
+  #welcome #nav-bar #nav-sections #hamburger {
+    transform: scaleY(100%);
+    opacity: 1;
+  }
 }
 #welcome #nav-bar #nav-sections #hamburger.show {
   opacity: 1;
@@ -75,20 +86,47 @@
   align-items: center;
   color: #202C4E;
 }
+@media screen and (max-width: 800px) {
+  #welcome #hero {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
 #welcome #hero #hero-img {
   width: 30%;
   margin-right: 10%;
+}
+@media screen and (max-width: 800px) {
+  #welcome #hero #hero-img {
+    margin-right: 0;
+  }
 }
 #welcome #hero #hero-text-container {
   width: 35%;
   margin-left: 10%;
 }
+@media screen and (max-width: 800px) {
+  #welcome #hero #hero-text-container {
+    margin-left: 0;
+    width: 80%;
+  }
+}
 #welcome #hero #hero-text-container #hero-title {
   letter-spacing: 2px;
+}
+@media screen and (max-width: 800px) {
+  #welcome #hero #hero-text-container #hero-title {
+    font-size: 1.5rem;
+  }
 }
 #welcome #hero #hero-text-container #hero-title span {
   font-size: 3.5rem;
   font-family: "Lobster", cursive;
+}
+@media screen and (max-width: 800px) {
+  #welcome #hero #hero-text-container #hero-title span {
+    font-size: 2rem;
+  }
 }
 #welcome #hero #hero-text-container #hero-text {
   letter-spacing: 1px;
@@ -96,9 +134,19 @@
   line-height: 2rem;
   margin-top: 1rem;
 }
+@media screen and (max-width: 800px) {
+  #welcome #hero #hero-text-container #hero-text {
+    font-size: 0.8rem;
+  }
+}
 #welcome #hero #hero-text-container #hero-motto {
   margin-top: 1rem;
   font-size: 2rem;
+}
+@media screen and (max-width: 800px) {
+  #welcome #hero #hero-text-container #hero-motto {
+    font-size: 1.5rem;
+  }
 }
 
 #about-container {
@@ -144,11 +192,15 @@
 #work-container .work-display-outer #work-display .work-detail {
   position: absolute;
   top: 20%;
+  left: 10%;
   opacity: 0;
   transition: 1s;
 }
 #work-container .work-display-outer #work-display .work-detail.work-appear {
   opacity: 1;
+}
+#work-container .work-display-outer #work-display .work-detail .work-image {
+  width: 90%;
 }
 #work-container .work-pages {
   width: 40%;
