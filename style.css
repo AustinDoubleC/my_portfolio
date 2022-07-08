@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  scroll-behavior: smooth;
+}
+
+#welcome {
+  background-image: linear-gradient(65deg, #202C4E, white, white, white);
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+#welcome #nav-logo {
+  font-family: "Lobster", cursive;
+  font-size: 2.5rem;
+  margin: 0.5rem 0.5rem 0.5rem 2.5rem;
+  color: #202C4E;
+}
+#welcome #nav-bar {
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+}
+#welcome #nav-bar #nav-sections {
+  display: flex;
+  justify-content: flex-end;
+}
+#welcome #nav-bar #nav-sections #nav-list {
+  display: flex;
+}
+#welcome #nav-bar #nav-sections #nav-list li {
+  list-style: none;
+  font-size: 1.5rem;
+  color: #202C4E;
+  padding: 0.5em 2rem;
+  border-radius: 1rem;
+  margin: 0.5rem 2.5rem 0.5rem 0.5rem;
+  height: 55px;
+  transition: all 0.5s;
+}
+#welcome #nav-bar #nav-sections #nav-list li:hover, #welcome #nav-bar #nav-sections #nav-list li :active {
+  background-color: #e7e6ff;
+  cursor: pointer;
+}
+#welcome #nav-bar #nav-sections #nav-list a {
+  text-decoration: none;
+}
+#welcome #nav-bar #nav-sections #hamburger {
+  font-size: 1.5rem;
+  padding: 0.5em 2rem;
+  height: 55px;
+  margin: 0.5rem;
+  color: #202C4E;
+  transition: all 0.5s;
+  position: fixed;
+  top: 0;
+  transform: scaleY(0%);
+  opacity: 0;
+}
+#welcome #nav-bar #nav-sections #hamburger.show {
+  opacity: 1;
+  transform: scaleY(100%);
+}
+#welcome #nav-bar #nav-sections #hamburger.show:hover, #welcome #nav-bar #nav-sections #hamburger.show :active {
+  color: #6C63FF;
+  cursor: pointer;
+}
+#welcome #hero {
+  width: 100%;
+  height: calc(100vh - 70px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #202C4E;
+}
+#welcome #hero #hero-img {
+  width: 30%;
+  margin-right: 10%;
+}
+#welcome #hero #hero-text-container {
+  width: 35%;
+  margin-left: 10%;
+}
+#welcome #hero #hero-text-container #hero-title {
+  letter-spacing: 2px;
+}
+#welcome #hero #hero-text-container #hero-title span {
+  font-size: 3.5rem;
+  font-family: "Lobster", cursive;
+}
+#welcome #hero #hero-text-container #hero-text {
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  margin-top: 1rem;
+}
+#welcome #hero #hero-text-container #hero-motto {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+#about-container {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about-container #work-test {
+  opacity: 0;
+  transition: all 1s;
+  transform: translateY(50px);
+}
+#about-container #work-test.appear {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+#work-container {
+  height: 400vh;
+  display: flex;
+}
+#work-container .work-display-outer {
+  width: 60%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  margin: 0 !important;
+}
+#work-container .work-display-outer #work-display {
+  background-color: #6C63FF;
+  width: 90%;
+  height: 90%;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#work-container .work-display-outer #work-display .work-detail {
+  position: absolute;
+  top: 20%;
+  opacity: 0;
+  transition: 1s;
+}
+#work-container .work-display-outer #work-display .work-detail.work-appear {
+  opacity: 1;
+}
+#work-container .work-pages {
+  width: 40%;
+}
+#work-container .work-pages .work {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#work-container .work-pages .work .work-logo {
+  width: 60%;
+}
+
+#contact-container {
+  width: 100%;
+  height: 100vh;
+  background-color: aquamarine;
+}/*# sourceMappingURL=style.css.map */
