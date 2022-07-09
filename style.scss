@@ -146,7 +146,7 @@ $light-grey:#ddd;
     display: flex;
     justify-content: center;
     align-items: center;
-    #work-test{
+    #about-content{
         opacity: 0;
         transition: all 1s;
         transform: translateY(50px);
@@ -175,18 +175,27 @@ $light-grey:#ddd;
             border-radius: 2rem;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             .work-detail{
                 position: absolute;
-                top: 20%;
-                left:10%;
                 opacity: 0;
                 transition: 1s;
+                background-color: $main-blue;
+                width: 80%;
+                height: calc(90% - 100px);
+                transform: translateY(100px);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                p{
+                    font-size: 1rem;
+                }
                 &.work-appear{
                     opacity: 1
                 }
                 .work-image{
-                    width: 90%;
+                    width: 60%;
                 }
             }
         }
@@ -201,6 +210,16 @@ $light-grey:#ddd;
             align-items: center;
             .work-logo{
                 width: 60%;
+            }
+            .work-modal{
+                background-color: $secondary-color;
+                height: 60vh;
+                width: 30%;
+                display: none;
+                opacity: 0;
+                position: absolute;
+                transition: all 0.5s;
+                padding:2rem
             }
         }
         

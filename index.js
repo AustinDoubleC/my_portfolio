@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger)
+
 const tl = gsap.timeline({ defaults: { ease: "slow" } });
     tl.fromTo("#hero-img", { opacity: 0,y:50 }, { opacity: 1,y:0, duration: 1, delay:0.75});
     tl.fromTo("#hero-title", { opacity: 0,y:20}, { opacity: 1,y:0, x:0,duration: 1},"-=0.5");
@@ -5,8 +7,70 @@ const tl = gsap.timeline({ defaults: { ease: "slow" } });
     tl.fromTo("#hero-motto", { opacity: 0,y:20 }, { opacity: 1,y:0, duration: 1},"-=1");
     tl.fromTo("#nav-logo", { opacity: 0,y:-20 }, { opacity: 1,y:0, duration: 1},"-=0.5");
     tl.fromTo("#nav-list", { opacity: 0,y:-20 }, { opacity: 1,y:0, duration: 1},"-=0.75");
-    
 
+const setEvents=()=>{    
+    const hamburger = document.getElementById("hamburger")
+    const bodyXModal = document.getElementById("bodyX-modal")
+    const fitnessProModal = document.getElementById("fitnessPro-modal")
+    const handyAppModal = document.getElementById("handyApp-modal")
+    const fatPenguinModal = document.getElementById("fatPenguin-modal")
+    const bodyXTitle = document.getElementById("bodyX-title")
+    const fitnessProTitle = document.getElementById("fitnessPro-title")
+    const handyAppTitle = document.getElementById("handyApp-title")
+    const fatPenguinTitle = document.getElementById("fatPenguin-title")
+    fitnessProTitle.addEventListener("mouseover",()=>{
+        fitnessProModal.style.display="block"
+        setTimeout(()=>{
+        fitnessProModal.style.opacity=0.9
+        },0)
+    })
+    
+    fitnessProTitle.addEventListener("mouseleave",()=>{
+        fitnessProModal.style.opacity=0
+        setTimeout(()=>{
+        fitnessPro.style.display="none"
+    },250)
+    })
+    handyAppTitle.addEventListener("mouseover",()=>{
+        handyAppModal.style.display="block"
+        setTimeout(()=>{
+        handyAppModal.style.opacity=0.9
+        },0)
+    })
+    
+    handyAppTitle.addEventListener("mouseleave",()=>{
+        handyAppModal.style.opacity=0
+        setTimeout(()=>{
+        handyAppModal.style.display="none"
+    },250)
+    })
+    fatPenguinTitle.addEventListener("mouseover",()=>{
+        fatPenguinModal.style.display="block"
+        setTimeout(()=>{
+        fatPenguinModal.style.opacity=0.9
+        },0)
+    })
+    
+    fatPenguinTitle.addEventListener("mouseleave",()=>{
+        fatPenguinModal.style.opacity=0
+        setTimeout(()=>{
+        fatPenguinModal.style.display="none"
+    },250)
+    })
+    bodyXTitle.addEventListener("mouseover",()=>{
+        bodyXModal.style.display="block"
+        setTimeout(()=>{
+        bodyXModal.style.opacity=0.9
+        },0)
+    })
+    
+    bodyXTitle.addEventListener("mouseleave",()=>{
+        bodyXModal.style.opacity=0
+        setTimeout(()=>{
+        bodyXModal.style.display="none"
+    },250)
+    })
+}
 const scroll= ()=>{
     const controller = new ScrollMagic.Controller()
     //split Screen
@@ -18,16 +82,7 @@ const scroll= ()=>{
     .setPin(".work-display-outer")
     .addIndicators()
     .addTo(controller)
-    // for display text
-    const showText = new ScrollMagic.Scene({
-        triggerElement:"#work-test",
-        triggerHook:0.9,
-        reverse:false
-    })
-    .setClassToggle("#work-test","appear")
-    .addIndicators()
-    .addTo(controller)
-
+    
     //show and hide hamburger
     const showBurger = new ScrollMagic.Scene({
         triggerElement:"#hero",
@@ -37,42 +92,60 @@ const scroll= ()=>{
     .addIndicators()
     .addTo(controller)
 
-    // for display work detail
-    const showWorkDetail1 = new ScrollMagic.Scene({
-        duration:"80%",
-        triggerElement:"#project-1-title",
-        triggerHook:0.5,
-    })
-    .setClassToggle("#project-1","work-appear")
-    .addIndicators()
-    .addTo(controller)
-
-    const showWorkDetail2 = new ScrollMagic.Scene({
-        duration:"100%",
-        triggerElement:"#project-2-title",
-        triggerHook:0.5,
-    })
-    .setClassToggle("#project-2","work-appear")
-    .addIndicators()
-    .addTo(controller)
-
-    const showWorkDetail3 = new ScrollMagic.Scene({
-        duration:"100%",
-        triggerElement:"#project-3-title",
-        triggerHook:0.5,
-    })
-    .setClassToggle("#project-3","work-appear")
-    .addIndicators()
-    .addTo(controller)
-
-    const showWorkDetail4 = new ScrollMagic.Scene({
-        duration:"100%",
-        triggerElement:"#project-4-title",
-        triggerHook:0.5,
-    })
-    .setClassToggle("#project-4","work-appear")
-    .addIndicators()
-    .addTo(controller)
 }
+
+gsap.to("#project-1",{
+    scrollTrigger:{
+        trigger:"#fitnessPro-title",
+        toggleActions:"restart pause reverse pause",
+        start:"top center",
+        endTrigger:"#handyApp-title",
+        end:"top bottom",
+        scrub:true,
+        markers:true,
+    },
+    opacity:1,
+    y:0,
+})
+gsap.to("#project-2",{
+    scrollTrigger:{
+        trigger:"#handyApp-title",
+        toggleActions:"restart pause reverse pause",
+        start:"top center",
+        endTrigger:"#fatPenguin-title",
+        end:"top bottom",
+        scrub:true,
+        markers:true,
+    },
+    opacity:1,
+    y:0,
+})
+gsap.to("#project-3",{
+    scrollTrigger:{
+        trigger:"#fatPenguin-title",
+        toggleActions:"restart pause reverse pause",
+        start:"top center",
+        endTrigger:"#bodyX-title",
+        end:"top bottom",
+        scrub:true,
+        markers:true,
+    },
+    opacity:1,
+    y:0,
+})
+gsap.to("#project-4",{
+    scrollTrigger:{
+        trigger:"#bodyX-title",
+        toggleActions:"restart pause reverse pause",
+        start:"top center",
+        //endTrigger:"#bodyX-title", //change it when more items add
+        //end:"top bottom",
+        scrub:true,
+        markers:true,
+    },
+    opacity:1,
+    y:0,
+})
+
 scroll()
-document.getElementById("hamburger").addEventListener("click",()=>{console.log("clicked")})
+setEvents()
