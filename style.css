@@ -120,6 +120,11 @@
     font-size: 1.5rem;
   }
 }
+@media (max-height: 500px) {
+  #welcome #hero #hero-text-container #hero-title {
+    font-size: 1.3rem;
+  }
+}
 #welcome #hero #hero-text-container #hero-title span {
   font-size: 3.5rem;
   font-family: "Lobster", cursive;
@@ -131,7 +136,7 @@
 }
 @media (max-height: 500px) {
   #welcome #hero #hero-text-container #hero-title span {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 }
 #welcome #hero #hero-text-container #hero-text {
