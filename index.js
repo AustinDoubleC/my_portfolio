@@ -95,11 +95,11 @@ const scroll= ()=>{
 }
 
 const tl2 = gsap.timeline();
-tl2.to("#about-center",{opacity:1})
+tl2.to("#HKStudy",{opacity:1})
 tl2.to("#HK1",{opacity:1})
-tl2.to("#HK1",{y:-200, fontSize:8})
-tl2.to("#HK2",{opacity:1})
+tl2.to("#HK2UK",{opacity:1})
 tl2.to("#UK1",{opacity:1})
+
 ScrollTrigger.create({
     animation:tl2,
     trigger:"#about-container",

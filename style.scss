@@ -147,10 +147,51 @@ $light-grey:#ddd;
     justify-content: center;
     align-items: center;
     background-image: url("./image/about-bg.png");
+    @media screen and (max-width:800px) {
+        background-image: url("./image/about-bg-narrow.png");
+    }
     .about{
         opacity: 0;
         position:absolute;
-        background-color: #E9CB22;
+        width: 50%;
+        left:10%;
+        top:10%;
+        padding:1rem 1rem;
+        color: $primary-color;
+        @media screen and (max-width:800px) {
+            top:5%;
+        }
+        p{
+            font-size: 1rem;
+            @media screen and (max-width:800px) {
+                font-size: 0.8rem;
+            }
+        }
+    }
+    #HK1{
+        top:25%;
+        @media screen and (max-width:1000px) {
+            top:28%;
+        }
+        @media screen and (max-width:550px) {
+            top:22%;
+        }
+        
+    }
+    #HK2UK{
+        top:45%;
+        @media screen and (max-width:1000px) {
+            top:53%;
+        }
+        @media screen and (max-width:550px) {
+            top:50%;
+        }
+    }
+    #UK1{
+        top:55%;
+        @media screen and (max-width:1000px) {
+            top:65%;
+        }
     }
 }
 
