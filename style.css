@@ -163,6 +163,11 @@
     background-image: url("./image/about-bg-narrow.png");
   }
 }
+@media screen and (max-width: 600px) {
+  #about-container {
+    background-image: url("./image/about-bg-mobile.png");
+  }
+}
 #about-container .about {
   opacity: 0;
   position: absolute;
@@ -171,6 +176,12 @@
   top: 10%;
   padding: 1rem 1rem;
   color: #202C4E;
+}
+@media screen and (max-height: 500px) {
+  #about-container .about {
+    width: 80%;
+    text-shadow: 0 0 0.5px white;
+  }
 }
 @media screen and (max-width: 800px) {
   #about-container .about {
