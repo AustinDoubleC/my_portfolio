@@ -63,6 +63,7 @@
   top: 0;
   transform: scaleY(0%);
   opacity: 0;
+  z-index: 9;
 }
 @media (max-width: 800px) {
   #welcome #nav-bar #nav-sections #hamburger {
@@ -128,6 +129,11 @@
     font-size: 2rem;
   }
 }
+@media (max-height: 500px) {
+  #welcome #hero #hero-text-container #hero-title span {
+    font-size: 1rem;
+  }
+}
 #welcome #hero #hero-text-container #hero-text {
   letter-spacing: 1px;
   font-size: 1.2rem;
@@ -135,6 +141,11 @@
   margin-top: 1rem;
 }
 @media (max-width: 800px) {
+  #welcome #hero #hero-text-container #hero-text {
+    font-size: 0.8rem;
+  }
+}
+@media (max-height: 500px) {
   #welcome #hero #hero-text-container #hero-text {
     font-size: 0.8rem;
   }
