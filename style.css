@@ -164,6 +164,11 @@
     font-size: 1.5rem;
   }
 }
+@media (max-height: 500px) {
+  #welcome #hero #hero-text-container #hero-motto {
+    font-size: 1.3rem;
+  }
+}
 
 #about-container {
   width: 100%;
@@ -220,9 +225,14 @@
     top: 28%;
   }
 }
+@media screen and (max-height: 500px) {
+  #about-container #HK1 {
+    top: 30%;
+  }
+}
 @media screen and (max-width: 550px) {
   #about-container #HK1 {
-    top: 24%;
+    top: 22%;
   }
 }
 #about-container #HK2UK {

@@ -144,6 +144,9 @@ $light-grey:#ddd;
                 @media screen and (max-width:800px) {
                     font-size: 1.5rem;
                 }
+                @media (max-height:500px) {
+                    font-size: 1.3rem;
+                }
             }       
         }
     }
@@ -190,8 +193,11 @@ $light-grey:#ddd;
         @media screen and (max-width:1000px) {
             top:28%;
         }
+        @media screen and (max-height:500px) {
+            top:30%;
+        }
         @media screen and (max-width:550px) {
-            top:24%;
+            top:22%;
         }
         
     }
