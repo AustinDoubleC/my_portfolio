@@ -1,12 +1,12 @@
 gsap.registerPlugin(ScrollTrigger)
 
-const tl = gsap.timeline({ defaults: { ease: "slow" } });
-    tl.fromTo("#hero-img", { opacity: 0,y:50 }, { opacity: 1,y:0, duration: 1, delay:0.75});
-    tl.fromTo("#hero-title", { opacity: 0,y:20}, { opacity: 1,y:0, x:0,duration: 1},"-=0.5");
-    tl.fromTo("#hero-text", { opacity: 0,y:20 }, { opacity: 1,y:0, duration: 1},"-=0.25");
-    tl.fromTo("#hero-motto", { opacity: 0,y:20 }, { opacity: 1,y:0, duration: 1},"-=1");
-    tl.fromTo("#nav-logo", { opacity: 0,y:-20 }, { opacity: 1,y:0, duration: 1},"-=0.5");
-    tl.fromTo("#nav-list", { opacity: 0,y:-20 }, { opacity: 1,y:0, duration: 1},"-=0.75");
+const tl1 = gsap.timeline({ defaults: { ease: "slow" } });
+    tl1.fromTo("#hero-img", { opacity: 0,y:50 }, { opacity: 1,y:0, duration: 1, delay:0.75});
+    tl1.fromTo("#hero-title", { opacity: 0,y:20}, { opacity: 1,y:0, x:0,duration: 1},"-=0.5");
+    tl1.fromTo("#hero-text", { opacity: 0,y:20 }, { opacity: 1,y:0, duration: 1},"-=0.25");
+    tl1.fromTo("#hero-motto", { opacity: 0,y:20 }, { opacity: 1,y:0, duration: 1},"-=1");
+    tl1.fromTo("#nav-logo", { opacity: 0,y:-20 }, { opacity: 1,y:0, duration: 1},"-=0.5");
+    tl1.fromTo("#nav-list", { opacity: 0,y:-20 }, { opacity: 1,y:0, duration: 1},"-=0.75");
 
 const setEvents=()=>{    
     const hamburger = document.getElementById("hamburger")
@@ -94,6 +94,22 @@ const scroll= ()=>{
 
 }
 
+const tl2 = gsap.timeline();
+tl2.to("#about-center",{opacity:1})
+tl2.to("#HK1",{opacity:1})
+tl2.to("#HK1",{y:-200, fontSize:8})
+tl2.to("#HK2",{opacity:1})
+tl2.to("#UK1",{opacity:1})
+ScrollTrigger.create({
+    animation:tl2,
+    trigger:"#about-container",
+    start:"top top",
+    scrub:true,
+    pin:true
+})
+
+
+
 gsap.to("#project-1",{
     scrollTrigger:{
         trigger:"#fitnessPro-title",
@@ -107,6 +123,7 @@ gsap.to("#project-1",{
     opacity:1,
     y:0,
 })
+
 gsap.to("#project-2",{
     scrollTrigger:{
         trigger:"#handyApp-title",

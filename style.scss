@@ -146,14 +146,11 @@ $light-grey:#ddd;
     display: flex;
     justify-content: center;
     align-items: center;
-    #about-content{
+    background-image: url("./image/about-bg.png");
+    .about{
         opacity: 0;
-        transition: all 1s;
-        transform: translateY(50px);
-        &.appear{
-            opacity: 1;
-            transform: translateY(0px)
-        }
+        position:absolute;
+        background-color: #E9CB22;
     }
 }
 
