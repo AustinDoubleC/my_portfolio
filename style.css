@@ -256,6 +256,13 @@
     top: 65%;
   }
 }
+#about-container #skills {
+  top: 40%;
+}
+#about-container #skills .fa-brands {
+  font-size: 4rem;
+  margin-right: 1rem;
+}
 
 #work-container {
   height: 400vh;

@@ -99,6 +99,11 @@ tl2.to("#HKStudy",{opacity:1})
 tl2.to("#HK1",{opacity:1})
 tl2.to("#HK2UK",{opacity:1})
 tl2.to("#UK1",{opacity:1})
+tl2.to("#HKStudy",{opacity:0, duration:1})
+tl2.to("#HK1",{opacity:0, duration:1},"-=1")
+tl2.to("#HK2UK",{opacity:0, duration:1},"-=1")
+tl2.to("#UK1",{opacity:0, duration:1},"-=1")
+tl2.to("#skills",{opacity:1})
 
 ScrollTrigger.create({
     animation:tl2,
