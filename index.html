@@ -227,7 +227,22 @@
         </div>
     </div>
     <div id="contact-container">
-
+        <div id="contact-upper">
+            <h2>Contact</h2>
+            <h3>You can send me a quick email using below form or using your <a href="mailto:austinccy81@gmail.com">own email.</a></h3>
+            <form action="https://formsubmit.co/austinccy81@gmail.com" method="POST" id="emailForm">
+                <div id="input-container">
+                    <input type="text" id="input-name" name="name" placeholder="Name" required>
+                    <input type="email" id="input-email" name="email" placeholder="Email" required>
+                    <input type="hidden" name="_next" value="https://austindoublec.github.io/my_portfolio/thankyou.html">
+                </div>
+                <textarea id="input-message" name="message" placeholder="Your message..." required></textarea>
+                <button type="submit" id="btnSubmit">Submit</button>
+            </form>
+            <h1>THANK YOU</h1>
+            
+        </div>
+        <div id="contact-lower"></div>
     </div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"

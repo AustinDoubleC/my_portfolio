@@ -37,6 +37,7 @@ const setEvents=()=>{
     const blackjackLogo = document.getElementById("blackjack-logo")
     const bodyXLogo = document.getElementById("bodyx-logo")
 
+
     const closeHamburger =()=>{
         hamburger.classList.remove("open")
         btnHome.style.opacity=0
