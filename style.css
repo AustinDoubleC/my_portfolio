@@ -475,10 +475,15 @@
   height: 100vh;
 }
 #contact-container #contact-upper {
-  height: 60vh;
+  height: 55vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media screen and (max-height: 500px) {
+  #contact-container #contact-upper {
+    height: auto;
+  }
 }
 #contact-container #contact-upper h1 {
   font-family: Arial, Helvetica, sans-serif;
@@ -489,6 +494,11 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+@media screen and (max-width: 800px) {
+  #contact-container #contact-upper h1 {
+    display: none;
+  }
 }
 #contact-container #contact-upper h2 {
   background-color: #202C4E;
@@ -525,8 +535,18 @@
   display: flex;
   justify-content: center;
 }
+@media screen and (max-width: 800px) {
+  #contact-container #contact-upper form #input-container {
+    flex-direction: column;
+  }
+}
 #contact-container #contact-upper form #input-container #input-name {
   margin-right: 5rem;
+}
+@media screen and (max-width: 800px) {
+  #contact-container #contact-upper form #input-container #input-name {
+    margin: 0.5rem 0 1rem 0;
+  }
 }
 #contact-container #contact-upper form input {
   width: 300px;
@@ -554,6 +574,12 @@
   resize: none;
   font-size: 1rem;
 }
+@media screen and (max-width: 800px) {
+  #contact-container #contact-upper form #input-message {
+    width: 90%;
+    min-width: 300px;
+  }
+}
 #contact-container #contact-upper form #btnSubmit {
   margin-top: 1rem;
   height: 2rem;
@@ -565,8 +591,59 @@
 #contact-container #contact-upper form #btnSubmit:hover, #contact-container #contact-upper form #btnSubmit :active {
   cursor: pointer;
 }
+@media screen and (max-width: 800px) {
+  #contact-container #contact-upper form #btnSubmit {
+    margin-bottom: 1rem;
+  }
+}
 #contact-container #contact-lower {
   width: 100%;
-  height: 40vh;
+  height: 45vh;
   background-color: #202C4E;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#contact-container #contact-lower h1 {
+  color: white;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-top: 1rem;
+}
+#contact-container #contact-lower #githubLinkedin {
+  display: flex;
+  justify-content: center;
+}
+#contact-container #contact-lower #githubLinkedin a {
+  color: white;
+  text-decoration: none;
+  font-size: 4rem;
+}
+#contact-container #contact-lower #githubLinkedin .fa-github {
+  margin-right: 2rem;
+}
+#contact-container #contact-lower p {
+  color: #6C63FF;
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  #contact-container #contact-lower p {
+    font-size: 0.6rem;
+  }
+}
+
+#sidebar {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+#sidebar a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=style.css.map */
