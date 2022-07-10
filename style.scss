@@ -267,7 +267,12 @@ $light-grey:#ddd;
             }
         }
     }
-    
+    #HKStudy,#HK1,#HK2UK,#UK1{
+        margin-left: 3rem;
+        @media screen and (max-width:800px) {
+            margin-left: 1rem;
+        }
+    }
     #skills{
         position: absolute;
         top:40%;
