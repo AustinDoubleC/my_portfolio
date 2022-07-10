@@ -56,27 +56,72 @@ $light-grey:#ddd;
             }
             #hamburger{
                 font-size: 1.5rem;
-                padding: 0.5em 2rem;
+                padding: 0.5em 1rem 2rem 2rem;
                 height: 55px;
-                margin: 0.5rem;
+                border-bottom-left-radius: 100%;;
+                margin: 0;
                 color: $primary-color;
                 transition: all 0.5s;
                 position: fixed;
                 top:0;
-                transform: scaleY(0%);
+                transform: translate(100px, -100px);
                 opacity: 0;
                 z-index:9;
+                background-color: $primary-color;
+                color: white;
+                display:flex;
+                flex-direction: column;
+                align-items: flex-end;
+                a{
+                    color: white;
+                    text-decoration: none;
+                    &:hover,:active{
+                        color: $main-blue;
+                    }
+                }
+                li{
+                    list-style: none;
+                }
+                #btn-hamburger{
+                    &:hover,:active{
+                        cursor: pointer;
+                        color: $main-blue;
+                    }
+                }
+                #burger-text{
+                    position: absolute;
+                    top:50px;
+                    display: none;
+                }
+                #burger-about{
+                    position: absolute;
+                    top:5px;
+                    left:10px;
+                    display: none;
+                }
+                #burger-work{
+                    position: absolute;
+                    top:100px;
+                    left:65px;
+                    display: none;
+                }
+                #burger-contact{
+                    position: absolute;
+                    top:150px;
+                    left:150px;
+                    display: none;
+                }
+                &.open{
+                    width: 200px;
+                    height: 200px;
+                }
                 @media (max-width:800px) {
-                    transform: scaleY(100%);
+                    transform: translate(0, 0);
                     opacity: 1;
                 }
                     &.show{
                         opacity: 1;
-                        transform: scaleY(100%);
-                        &:hover, :active{
-                            color: $main-blue;
-                            cursor: pointer;
-                    }
+                        transform: translate(0, 0);
                 }
             }
         }
@@ -168,59 +213,44 @@ $light-grey:#ddd;
     }
     .about{
         opacity: 0;
-        position:absolute;
         width: 50%;
-        left:10%;
-        top:10%;
         padding:1rem 1rem;
         color: $primary-color;
         @media screen and (max-height:500px){
-            width: 80%;
+            width: 50%;
             text-shadow: 0 0 0.5px white;
         }
+        @media screen and (max-width:1200px) {
+            width:70%;
+        }
+        
         @media screen and (max-width:800px) {
-            top:5%;
+            width:80%;
         }
         p{
             font-size: 1rem;
+            @media screen and (max-width:1000px) {
+                font-size: 0.9rem;
+            }
             @media screen and (max-width:800px) {
                 font-size: 0.8rem;
             }
         }
     }
-    #HK1{
-        top:25%;
-        @media screen and (max-width:1000px) {
-            top:28%;
-        }
-        @media screen and (max-height:500px) {
-            top:30%;
-        }
-        @media screen and (max-width:550px) {
-            top:22%;
-        }
-        
-    }
-    #HK2UK{
-        top:45%;
-        @media screen and (max-width:1000px) {
-            top:53%;
-        }
-        @media screen and (max-width:550px) {
-            top:50%;
-        }
-    }
-    #UK1{
-        top:55%;
-        @media screen and (max-width:1000px) {
-            top:65%;
-        }
-    }
+    
     #skills{
+        position: absolute;
         top:40%;
+        left:10%;
         .fa-brands{
             font-size: 4rem;
             margin-right: 1rem;
+            @media screen and (max-width:1000px) {
+                font-size: 3rem;
+            }
+            @media screen and (max-width:800px) {
+                font-size: 2rem;
+            }
         }
     }
 }

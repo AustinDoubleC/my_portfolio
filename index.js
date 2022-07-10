@@ -18,6 +18,12 @@ const setEvents=()=>{
     const fitnessProTitle = document.getElementById("fitnessPro-title")
     const handyAppTitle = document.getElementById("handyApp-title")
     const fatPenguinTitle = document.getElementById("fatPenguin-title")
+    const btnHamburger = document.getElementById("btn-hamburger")
+
+    btnHamburger.addEventListener("click",()=>{
+        hamburger.classList.add("open")
+    })
+
     fitnessProTitle.addEventListener("mouseover",()=>{
         fitnessProModal.style.display="block"
         setTimeout(()=>{
