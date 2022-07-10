@@ -13,17 +13,29 @@ const setEvents=()=>{
     const bodyXModal = document.getElementById("bodyX-modal")
     const fitnessProModal = document.getElementById("fitnessPro-modal")
     const handyAppModal = document.getElementById("handyApp-modal")
+    const blackjackModal = document.getElementById("blackjack-modal")
     const fatPenguinModal = document.getElementById("fatPenguin-modal")
-    const bodyXTitle = document.getElementById("bodyX-title")
-    const fitnessProTitle = document.getElementById("fitnessPro-title")
-    const handyAppTitle = document.getElementById("handyApp-title")
-    const fatPenguinTitle = document.getElementById("fatPenguin-title")
+    const bodyXHeader = document.getElementById("bodyX-header")
+    const fitnessProHeader = document.getElementById("fitnessPro-header")
+    const handyAppHeader = document.getElementById("handyApp-header")
+    const blackjackHeader = document.getElementById("blackjack-header")
+    const fatPenguinHeader = document.getElementById("fatPenguin-header")
     const btnHamburger = document.getElementById("btn-hamburger")
     const btnHome = document.getElementById("burger-home")
     const btnAbout = document.getElementById("burger-about")
     const btnWork = document.getElementById("burger-work")
     const btnContact = document.getElementById("burger-contact")
     const burgerText = document.getElementById("burger-text")
+    const fitnessProTitle = document.getElementById("fitnessPro-title")
+    const handyAppTitle = document.getElementById("handyApp-title")
+    const fatPenguinTitle = document.getElementById("fatPenguin-title")
+    const blackjackTitle = document.getElementById("blackjack-title")
+    const bodyXTitle = document.getElementById("bodyx-title")
+    const fitnessProLogo = document.getElementById("fitnessPro-logo")
+    const handyAppLogo = document.getElementById("handyApp-logo")
+    const fatPenguinLogo = document.getElementById("fatPenguin-logo")
+    const blackjackLogo = document.getElementById("blackjack-logo")
+    const bodyXLogo = document.getElementById("bodyx-logo")
 
     const closeHamburger =()=>{
         hamburger.classList.remove("open")
@@ -92,54 +104,77 @@ const setEvents=()=>{
     btnContact.addEventListener("click",closeHamburger)
     btnWork.addEventListener("click",closeHamburger)
 
-    fitnessProTitle.addEventListener("mouseover",()=>{
-        fitnessProModal.style.display="block"
+    fitnessProHeader.addEventListener("mouseover",()=>{
+        fitnessProModal.style.display="flex"
+        fitnessProTitle.style.opacity=0
         setTimeout(()=>{
-        fitnessProModal.style.opacity=0.9
+        fitnessProModal.style.opacity=0.8
         },0)
     })
     
-    fitnessProTitle.addEventListener("mouseleave",()=>{
+    fitnessProHeader.addEventListener("mouseleave",()=>{
         fitnessProModal.style.opacity=0
-        setTimeout(()=>{
+        fitnessProTitle.style.opacity=0.8
+        setTimeout(()=>{       
         fitnessPro.style.display="none"
     },250)
     })
-    handyAppTitle.addEventListener("mouseover",()=>{
-        handyAppModal.style.display="block"
+    handyAppHeader.addEventListener("mouseover",()=>{
+        handyAppModal.style.display="flex"
+        handyAppTitle.style.opacity=0
         setTimeout(()=>{
-        handyAppModal.style.opacity=0.9
+        handyAppModal.style.opacity=0.8
         },0)
     })
     
-    handyAppTitle.addEventListener("mouseleave",()=>{
+    handyAppHeader.addEventListener("mouseleave",()=>{
         handyAppModal.style.opacity=0
+        handyAppTitle.style.opacity=0.8
         setTimeout(()=>{
         handyAppModal.style.display="none"
     },250)
     })
-    fatPenguinTitle.addEventListener("mouseover",()=>{
-        fatPenguinModal.style.display="block"
+    fatPenguinHeader.addEventListener("mouseover",()=>{
+        fatPenguinModal.style.display="flex"
+        fatPenguinTitle.style.opacity=0
         setTimeout(()=>{
-        fatPenguinModal.style.opacity=0.9
+        fatPenguinModal.style.opacity=0.8
         },0)
     })
     
-    fatPenguinTitle.addEventListener("mouseleave",()=>{
+    fatPenguinHeader.addEventListener("mouseleave",()=>{
         fatPenguinModal.style.opacity=0
+        fatPenguinTitle.style.opacity=0.8
         setTimeout(()=>{
         fatPenguinModal.style.display="none"
     },250)
     })
-    bodyXTitle.addEventListener("mouseover",()=>{
-        bodyXModal.style.display="block"
+    blackjackHeader.addEventListener("mouseover",()=>{
+        blackjackModal.style.display="flex"
+        blackjackTitle.style.opacity=0
         setTimeout(()=>{
-        bodyXModal.style.opacity=0.9
+        blackjackModal.style.opacity=0.8
         },0)
     })
     
-    bodyXTitle.addEventListener("mouseleave",()=>{
+    blackjackHeader.addEventListener("mouseleave",()=>{
+        blackjackModal.style.opacity=0
+        blackjackTitle.style.opacity=0.8
+        setTimeout(()=>{
+        blackjackModal.style.display="none"
+    },250)
+    })
+    bodyXHeader.addEventListener("mouseover",()=>{
+        bodyXModal.style.display="flex"
+        bodyXTitle.style.opacity=0
+        setTimeout(()=>{
+        bodyXModal.style.opacity=0.8
+        },0)
+    })
+    
+    bodyXHeader.addEventListener("mouseleave",()=>{
         bodyXModal.style.opacity=0
+        bodyXTitle.style.opacity=0.8
         setTimeout(()=>{
         bodyXModal.style.display="none"
     },250)
@@ -149,7 +184,7 @@ const scroll= ()=>{
     const controller = new ScrollMagic.Controller()
     //split Screen
     const split = new ScrollMagic.Scene({
-        duration:"300%",
+        duration:"400%",
         triggerElement:".work-display-outer",
         triggerHook:0,
     })
@@ -191,11 +226,11 @@ ScrollTrigger.create({
 
 gsap.to("#project-1",{
     scrollTrigger:{
-        trigger:"#fitnessPro-title",
+        trigger:"#fitnessPro-header",
         toggleActions:"restart pause reverse pause",
-        start:"top center",
-        endTrigger:"#handyApp-title",
-        end:"top bottom",
+        start:"top 75%",
+        endTrigger:"#fitnessPro-header",
+        end:"top 25%",
         scrub:true,
         markers:true,
     },
@@ -205,11 +240,11 @@ gsap.to("#project-1",{
 
 gsap.to("#project-2",{
     scrollTrigger:{
-        trigger:"#handyApp-title",
+        trigger:"#handyApp-header",
         toggleActions:"restart pause reverse pause",
-        start:"top center",
-        endTrigger:"#fatPenguin-title",
-        end:"top bottom",
+        start:"top 75%",
+        endTrigger:"#handyApp-header",
+        end:"top 25%",
         scrub:true,
         markers:true,
     },
@@ -218,11 +253,11 @@ gsap.to("#project-2",{
 })
 gsap.to("#project-3",{
     scrollTrigger:{
-        trigger:"#fatPenguin-title",
+        trigger:"#fatPenguin-header",
         toggleActions:"restart pause reverse pause",
-        start:"top center",
-        endTrigger:"#bodyX-title",
-        end:"top bottom",
+        start:"top 75%",
+        endTrigger:"#fatPenguin-header",
+        end:"top 25%",
         scrub:true,
         markers:true,
     },
@@ -231,11 +266,24 @@ gsap.to("#project-3",{
 })
 gsap.to("#project-4",{
     scrollTrigger:{
-        trigger:"#bodyX-title",
+        trigger:"#blackjack-header",
         toggleActions:"restart pause reverse pause",
-        start:"top center",
-        //endTrigger:"#bodyX-title", //change it when more items add
-        //end:"top bottom",
+        start:"top 75%",
+        endTrigger:"#blackjack-header", 
+        end:"top 25%",
+        scrub:true,
+        markers:true,
+    },
+    opacity:1,
+    y:0,
+})
+gsap.to("#project-5",{
+    scrollTrigger:{
+        trigger:"#bodyX-header",
+        toggleActions:"restart pause reverse pause",
+        start:"top 75%",
+        endTrigger:"#bodyX-header",
+        end:"top 25%",
         scrub:true,
         markers:true,
     },

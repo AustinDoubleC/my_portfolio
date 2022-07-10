@@ -322,7 +322,7 @@
 }
 
 #work-container {
-  height: 400vh;
+  height: 500vh;
   display: flex;
 }
 #work-container .work-display-outer {
@@ -369,24 +369,83 @@
   width: 40%;
 }
 #work-container .work-pages .work {
+  width: 60%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 #work-container .work-pages .work .work-logo {
-  width: 60%;
+  width: 100%;
+  max-width: 250px;
+}
+#work-container .work-pages .work .work-title {
+  background-color: #202C4E;
+  opacity: 0.8;
+  color: white;
+  padding: 0 2rem;
+  position: relative;
+  top: -3%;
+  transition: all 0.5s;
+}
+@media screen and (max-width: 800px) {
+  #work-container .work-pages .work .work-title {
+    font-size: 1.2rem;
+    top: -2%;
+  }
 }
 #work-container .work-pages .work .work-modal {
-  background-color: #E9CB22;
-  height: 60vh;
+  background-color: #202C4E;
   width: 30%;
+  max-width: 300px;
+  color: white;
   display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   opacity: 0;
   position: absolute;
+  transform: translateY(50%);
   transition: all 0.5s;
-  padding: 2rem;
+  padding: 1rem 2rem;
+  box-shadow: 5px 5px 2px #6C63FF;
+}
+@media screen and (max-width: 800px) {
+  #work-container .work-pages .work .work-modal {
+    padding: 1rem 0.5rem;
+  }
+}
+#work-container .work-pages .work .work-modal h2 {
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 800px) {
+  #work-container .work-pages .work .work-modal h2 {
+    font-size: 1rem;
+  }
+}
+#work-container .work-pages .work .work-modal p, #work-container .work-pages .work .work-modal h3 {
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  #work-container .work-pages .work .work-modal p, #work-container .work-pages .work .work-modal h3 {
+    font-size: 0.8rem;
+  }
+}
+#work-container .work-pages .work .work-modal a {
+  text-decoration: none;
+  color: white;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+#work-container .work-pages .work .work-modal a:hover, #work-container .work-pages .work .work-modal a :active {
+  color: #E9CB22;
+}
+@media screen and (max-width: 800px) {
+  #work-container .work-pages .work .work-modal a {
+    font-size: 1rem;
+  }
 }
 
 #contact-container {
