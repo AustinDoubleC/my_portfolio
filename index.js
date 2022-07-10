@@ -19,10 +19,78 @@ const setEvents=()=>{
     const handyAppTitle = document.getElementById("handyApp-title")
     const fatPenguinTitle = document.getElementById("fatPenguin-title")
     const btnHamburger = document.getElementById("btn-hamburger")
+    const btnHome = document.getElementById("burger-home")
+    const btnAbout = document.getElementById("burger-about")
+    const btnWork = document.getElementById("burger-work")
+    const btnContact = document.getElementById("burger-contact")
+    const burgerText = document.getElementById("burger-text")
+
+    const closeHamburger =()=>{
+        hamburger.classList.remove("open")
+        btnHome.style.opacity=0
+        btnAbout.style.opacity=0
+        btnWork.style.opacity=0
+        btnContact.style.opacity=0
+        burgerText.style.opacity=0
+        setTimeout(()=>{
+            btnHome.style.display="none"
+            btnAbout.style.display="none"
+            btnWork.style.display="none"
+            btnContact.style.display="none"
+            burgerText.style.display="none"
+        },300)
+    }
 
     btnHamburger.addEventListener("click",()=>{
-        hamburger.classList.add("open")
+        if (hamburger.classList.contains("open")){
+            closeHamburger()
+            
+        }else{
+            hamburger.classList.add("open")
+            btnHome.style.display="block"
+            btnAbout.style.display="block"
+            btnWork.style.display="block"
+            btnContact.style.display="block"
+            burgerText.style.display="block"
+            setTimeout(()=>{
+                btnHome.style.opacity=1
+                btnAbout.style.opacity=1
+                btnWork.style.opacity=1
+                btnContact.style.opacity=1
+                burgerText.style.opacity=1
+            },300)
+        }
     })
+
+    btnHome.addEventListener("mouseover",()=>{
+        burgerText.innerText = "Home"
+    })
+    btnHome.addEventListener("mouseleave",()=>{
+        burgerText.innerText = ""
+    })
+    btnAbout.addEventListener("mouseover",()=>{
+        burgerText.innerText = "About"
+    })
+    btnAbout.addEventListener("mouseleave",()=>{
+        burgerText.innerText = ""
+    })
+    btnWork.addEventListener("mouseover",()=>{
+        burgerText.innerText = "Work"
+    })
+    btnWork.addEventListener("mouseleave",()=>{
+        burgerText.innerText = ""
+    })
+    btnContact.addEventListener("mouseover",()=>{
+        burgerText.innerText = "Contact"
+    })
+    btnContact.addEventListener("mouseleave",()=>{
+        burgerText.innerText = ""
+    })
+
+    btnHome.addEventListener("click",closeHamburger)
+    btnAbout.addEventListener("click",closeHamburger)
+    btnContact.addEventListener("click",closeHamburger)
+    btnWork.addEventListener("click",closeHamburger)
 
     fitnessProTitle.addEventListener("mouseover",()=>{
         fitnessProModal.style.display="block"
