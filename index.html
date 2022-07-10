@@ -76,77 +76,152 @@
         <div class="work-display-outer">
             <div id="work-display">
                 <div class="work-detail" id="project-1">
-                    <h1>project 1</h1>
-                    <img src="./image/fitness-pro.png" alt="fitness" class="work-image"/>
-                    <p>Use firebase to create a user register and login function.  Users can subscribe to differnt plan after registration.  The subscribed plan information is stored in firebase</p>
+                    <div class="work-detail-parts">
+                        <img src="./image/fitness-pro-1.png" alt="fitness" class="work-image"/>
+                        <div>
+                            <h3>Shopping Cart</h3>
+                            <p>Online shopping site with shopping cart function.  Users can update, delete the items in shopping cart.  All cart information are stored in local storage</p>
+                        </div>
+                    </div>
+                    <div class="work-detail-parts">
+                        <img src="./image/fitness-pro-2.png" alt="fitness" class="work-image"/>
+                        <div>
+                            <h3>Payment</h3>
+                            <p>simulate a payment process with basic card holder details and credit card number verification.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="work-detail" id="project-2">
-                    <h1>project 2</h1>
-                    <img src="./image/receipe.png" alt="recipe" class="work-image"/>
+                    <div class="work-detail-parts">
+                        <img src="./image/handyapp.png" alt="handy app" class="work-image"/>
+                        <div>
+                            <h3>4-in-1 app</h3>
+                            <p>My first react app which combines weather app, todo list, habit tracker, note taking app into single app</p>
+                        </div>
+                    </div>
+                    <div class="work-detail-parts">
+                        <div>
+                            <h3>Highlights</h3>
+                            <ul>
+                                <li>Weather app: fetch weather information from API which shows current weather and forecast</li>
+                                <li>Local storage and CRUD: Users can add/update/delete their own notes, habit information, todo to the app.  All information are stored in local storage</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="work-detail" id="project-3">
-                    <h1>project 3</h1>
-                    <img src="./image/fitness-pro.png" alt="fitness" class="work-image"/>
+                    <div class="work-detail-parts">
+                        <img src="./image/fat-penguin-1.png" alt="fat penguin" class="work-image"/>
+                        <div>
+                            <h3>Recipe searcher</h3>
+                            <p>Fetch recipe information from 2 APIs.  Users can search recipe with ingredients.  Also generates random recipes. </p>
+                            <p>First try on splide JS slider for the carousel effect.</p>
+                        </div>
+                    </div>
+                    <div class="work-detail-parts">
+                        <img src="./image/fat-penguin-2.png" alt="fat penguin" class="work-image"/>
+                        <div>
+                            <p>Ingredients and preparation time are shown in modal.  Also provided a link to the detailed recipe.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="work-detail" id="project-4">
-                    <h1>project 4</h1>
-                    <img src="./image/receipe.png" alt="recipe" class="work-image"/>
+                    <div class="work-detail-parts">
+                        <img src="./image/blackjack-1.png" alt="blackjack" class="work-image"/>
+                        <div>
+                            <p>My first card game that fetch random deck and card images from API.  Setup logics win/lose and whether the dealer need to draw card.</p>
+                        </div>
+                    </div>
+                    <div class="work-detail-parts">
+                        <img src="./image/blackjack-2.png" alt="blackjack" class="work-image"/>
+                        <div>
+                            <h3>Supported scenarios</h3>
+                            <ul>
+                                <li>Blackjack</li>
+                                <li>Insurance</li>
+                                <li>Double</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="work-detail" id="project-5">
-                    <h1>project 5</h1>
-                    <img src="./image/fitness-pro.png" alt="recipe" class="work-image"/>
+                    <div class="work-detail-parts">
+                        <img src="./image/bodyx-1.png" alt="BodyX" class="work-image"/>
+                        <div>
+                            <h3>Member Registration</h3>
+                            <p>Created member registration, login, logout functions by Firebase.  Members can login to the portal with their registered email address.</p>
+                            <p>First time using SASS on this project</p>
+                        </div>
+                    </div>
+                    <div class="work-detail-parts">
+                        <img src="./image/bodyx-2.png" alt="BodyX" class="work-image"/>
+                        <div>
+                            <h3>Member portal</h3>
+                            <p>Member can subscribe different plans and programs in portal after registration.  Plans and programs data also stored in Firebase.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="work-pages">
-            <div id="fitnessPro-header" class="work">
-                <img src="./image/fitnesspro-icon.svg" alt="Fitness Pro" class="work-logo" id="fitnessPro-logo"/>
-                <h1 class="work-title" id="fitnessPro-title">Fitness Pro</h1>
-                <div class="work-modal" id="fitnessPro-modal">
-                    <h2>Fitness Pro</h2>
-                    <h3>Skill used</h3>
-                    <p>HTML | CSS | Javascript</p>
-                    <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+            <div class="work">
+                <div id="fitnessPro-header" class="work-header">
+                    <img src="./image/fitnesspro-icon.svg" alt="Fitness Pro" class="work-logo" id="fitnessPro-logo"/>
+                    <h1 class="work-title" id="fitnessPro-title">Fitness Pro</h1>
+                    <div class="work-modal" id="fitnessPro-modal">
+                        <h2>Fitness Pro</h2>
+                        <h3>Skill used</h3>
+                        <p>HTML | CSS | Javascript</p>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
                 </div>
             </div>
-            <div id="handyApp-header" class="work">
-                <img src="./image/handyapp-icon.svg" alt="Handy App" class="work-logo" id="handyApp-logo"/>
-                <h1 class="work-title" id="handyApp-title">Handy app</h1>
-                <div class="work-modal" id="handyApp-modal">
-                    <h2>Handy App</h2>
-                    <h3>Skill used</h3>
-                    <p>HTML | CSS | Javascript | React</p>
-                    <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+            <div class="work">
+                <div id="handyApp-header" class="work-header">
+                    <img src="./image/handyapp-icon.svg" alt="Handy App" class="work-logo" id="handyApp-logo"/>
+                    <h1 class="work-title" id="handyApp-title">Handy app</h1>
+                    <div class="work-modal" id="handyApp-modal">
+                        <h2>Handy App</h2>
+                        <h3>Skill used</h3>
+                        <p>HTML | CSS | Javascript | React</p>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
                 </div>
             </div>
-            <div id="fatPenguin-header" class="work">
-                <img src="./image/fat-penguin.svg" alt="Fat Penguin" class="work-logo" id="fatPenguin-logo"/>
-                <h1 class="work-title" id="fatPenguin-title">Fat Penguin</h1>
-                <div class="work-modal" id="fatPenguin-modal">
-                    <h2>Fat Penguin</h2>
-                    <h3>Skill used</h3>
-                    <p>HTML | CSS | Javascript | React</p>
-                    <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+            <div class="work">
+                <div id="fatPenguin-header" class="work-header">
+                    <img src="./image/fat-penguin.svg" alt="Fat Penguin" class="work-logo" id="fatPenguin-logo"/>
+                    <h1 class="work-title" id="fatPenguin-title">Fat Penguin</h1>
+                    <div class="work-modal" id="fatPenguin-modal">
+                        <h2>Fat Penguin</h2>
+                        <h3>Skill used</h3>
+                        <p>HTML | CSS | Javascript | React</p>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
                 </div>
             </div>
-            <div id="blackjack-header" class="work">
-                <img src="./image/blackjack.svg" alt="Blackjack" class="work-logo" id="blackjack-logo"/>
-                <h1 class="work-title" id="blackjack-title">Blackjack</h1>
-                <div class="work-modal" id="blackjack-modal">
-                    <h2>Blackjack</h2>
-                    <h3>Skill used</h3>
-                    <p>HTML | CSS | Javascript</p>
-                    <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+            <div class="work">
+                <div id="blackjack-header" class="work-header">
+                    <img src="./image/blackjack.svg" alt="Blackjack" class="work-logo" id="blackjack-logo"/>
+                    <h1 class="work-title" id="blackjack-title">Blackjack</h1>
+                    <div class="work-modal" id="blackjack-modal">
+                        <h2>Blackjack</h2>
+                        <h3>Skill used</h3>
+                        <p>HTML | CSS | Javascript</p>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
                 </div>
             </div>
-            <div id="bodyX-header" class="work">
-                <img src="./image/bodyx-icon.svg" alt="Body X" class="work-logo" id="bodyX-logo"/>
-                <h1 class="work-title" id="bodyx-title">Body-X</h1>
-                <div class="work-modal" id="bodyX-modal">
-                    <h2>Body-X</h2>
-                    <h3>Skill used</h3>
-                    <p>HTML | CSS (SASS) | Javascript</p>
-                    <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+            <div class="work">
+                <div id="bodyX-header" class="work-header">
+                    <img src="./image/bodyx-icon.svg" alt="Body X" class="work-logo" id="bodyX-logo"/>
+                    <h1 class="work-title" id="bodyx-title">Body-X</h1>
+                    <div class="work-modal" id="bodyX-modal">
+                        <h2>Body-X</h2>
+                        <h3>Skill used</h3>
+                        <p>HTML | CSS (SASS) | Javascript</p>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

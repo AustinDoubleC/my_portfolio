@@ -222,8 +222,6 @@ ScrollTrigger.create({
     pin:true
 })
 
-
-
 gsap.to("#project-1",{
     scrollTrigger:{
         trigger:"#fitnessPro-header",
@@ -236,6 +234,19 @@ gsap.to("#project-1",{
     },
     opacity:1,
     y:0,
+})
+gsap.to("#project-1",{
+    scrollTrigger:{
+        trigger:"#handyApp-header",
+        toggleActions:"restart pause reverse pause",
+        start:"top 50%",
+        endTrigger:"#handyApp-header",
+        end:"top 75%",
+        scrub:true,
+        markers:true,
+    },
+    opacity:0,
+    y:-100,
 })
 
 gsap.to("#project-2",{
@@ -251,6 +262,20 @@ gsap.to("#project-2",{
     opacity:1,
     y:0,
 })
+gsap.to("#project-2",{
+    scrollTrigger:{
+        trigger:"#fatPenguin-header",
+        toggleActions:"restart pause reverse pause",
+        start:"top 50%",
+        endTrigger:"#fatPenguin-header",
+        end:"top 75%",
+        scrub:true,
+        markers:true,
+    },
+    opacity:0,
+    y:-100,
+})
+
 gsap.to("#project-3",{
     scrollTrigger:{
         trigger:"#fatPenguin-header",
@@ -264,12 +289,26 @@ gsap.to("#project-3",{
     opacity:1,
     y:0,
 })
+gsap.to("#project-3",{
+    scrollTrigger:{
+        trigger:"#blackjack-header",
+        toggleActions:"restart pause reverse pause",
+        start:"top 50%",
+        endTrigger:"#blackjack-header",
+        end:"top 75%",
+        scrub:true,
+        markers:true,
+    },
+    opacity:0,
+    y:-100,
+})
+
 gsap.to("#project-4",{
     scrollTrigger:{
         trigger:"#blackjack-header",
         toggleActions:"restart pause reverse pause",
         start:"top 75%",
-        endTrigger:"#blackjack-header", 
+        endTrigger:"#blackjack-header",
         end:"top 25%",
         scrub:true,
         markers:true,
@@ -277,6 +316,20 @@ gsap.to("#project-4",{
     opacity:1,
     y:0,
 })
+gsap.to("#project-4",{
+    scrollTrigger:{
+        trigger:"#bodyX-header",
+        toggleActions:"restart pause reverse pause",
+        start:"top 50%",
+        endTrigger:"#bodyX-header",
+        end:"top 75%",
+        scrub:true,
+        markers:true,
+    },
+    opacity:0,
+    y:-100,
+})
+
 gsap.to("#project-5",{
     scrollTrigger:{
         trigger:"#bodyX-header",

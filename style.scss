@@ -302,7 +302,7 @@ $light-grey:#ddd;
         font-size: 25px;
         margin: 0!important;
         #work-display{
-            background-color: $main-blue;
+            background-image: linear-gradient(to right top, #6cdbeb,$main-blue);
             width: 90%;
             height: 90%;
             border-radius: 2rem;
@@ -313,22 +313,38 @@ $light-grey:#ddd;
                 position: absolute;
                 opacity: 0;
                 transition: 1s;
-                background-color: $main-blue;
                 width: 80%;
-                height: calc(90% - 100px);
+                height: 90%;
                 transform: translateY(100px);
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                p{
-                    font-size: 1rem;
+                .work-detail-parts{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 1rem;
+                    background:linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+                    opacity: 1;
+                    padding: 1rem;
+                    border-radius: 2rem;
+                    h3,p, li{
+                        font-size: 1rem;
+                        margin-left: 1rem;
+                        color: $primary-color;
+                    }
+                    li{
+                        list-style:square;
+                        list-style-position: inside;
+                    }
+                    .work-image{
+                        width: 45%;
+                        border-radius: 0.5rem;
+                        //box-shadow: 5px 5px 2px 
+                    }
                 }
                 &.work-appear{
                     opacity: 1
-                }
-                .work-image{
-                    width: 60%;
                 }
             }
         }
@@ -343,10 +359,15 @@ $light-grey:#ddd;
             justify-content: center;
             align-items: center;
             margin: 0 auto;
+            .work-header{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
             .work-logo{
                 width: 100%;
                 max-width: 250px;
-
             }
             .work-title{
                 background-color: $primary-color;
@@ -363,7 +384,6 @@ $light-grey:#ddd;
             }
             .work-modal{
                 background-color: $primary-color;
-                //height: 30%;
                 width: 30%;
                 max-width: 300px;
                 color: white;

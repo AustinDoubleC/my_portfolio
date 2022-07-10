@@ -335,7 +335,7 @@
   margin: 0 !important;
 }
 #work-container .work-display-outer #work-display {
-  background-color: #6C63FF;
+  background-image: linear-gradient(to right top, #6cdbeb, #6C63FF);
   width: 90%;
   height: 90%;
   border-radius: 2rem;
@@ -347,23 +347,38 @@
   position: absolute;
   opacity: 0;
   transition: 1s;
-  background-color: #6C63FF;
   width: 80%;
-  height: calc(90% - 100px);
+  height: 90%;
   transform: translateY(100px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#work-container .work-display-outer #work-display .work-detail p {
+#work-container .work-display-outer #work-display .work-detail .work-detail-parts {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+  opacity: 1;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+#work-container .work-display-outer #work-display .work-detail .work-detail-parts h3, #work-container .work-display-outer #work-display .work-detail .work-detail-parts p, #work-container .work-display-outer #work-display .work-detail .work-detail-parts li {
   font-size: 1rem;
+  margin-left: 1rem;
+  color: #202C4E;
+}
+#work-container .work-display-outer #work-display .work-detail .work-detail-parts li {
+  list-style: square;
+  list-style-position: inside;
+}
+#work-container .work-display-outer #work-display .work-detail .work-detail-parts .work-image {
+  width: 45%;
+  border-radius: 0.5rem;
 }
 #work-container .work-display-outer #work-display .work-detail.work-appear {
   opacity: 1;
-}
-#work-container .work-display-outer #work-display .work-detail .work-image {
-  width: 60%;
 }
 #work-container .work-pages {
   width: 40%;
@@ -376,6 +391,12 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+}
+#work-container .work-pages .work .work-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #work-container .work-pages .work .work-logo {
   width: 100%;
