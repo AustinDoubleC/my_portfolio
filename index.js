@@ -31,12 +31,14 @@ const setEvents=()=>{
     const fatPenguinTitle = document.getElementById("fatPenguin-title")
     const blackjackTitle = document.getElementById("blackjack-title")
     const bodyXTitle = document.getElementById("bodyx-title")
-    const fitnessProLogo = document.getElementById("fitnessPro-logo")
-    const handyAppLogo = document.getElementById("handyApp-logo")
-    const fatPenguinLogo = document.getElementById("fatPenguin-logo")
-    const blackjackLogo = document.getElementById("blackjack-logo")
-    const bodyXLogo = document.getElementById("bodyx-logo")
-
+    const calendarDOM = document.getElementById("calendar")
+    const calendarDetail = document.getElementById("calendar-detail")
+    const gameFilterDOM = document.getElementById("game-filter")
+    const gameFilterDetail = document.getElementById("gameFilter-detail")
+    const countdownDOM = document.getElementById("countdown")
+    const countdownDetail = document.getElementById("countdown-detail")
+    const portfolioDOM = document.getElementById("portfolio")
+    const portfolioDetail = document.getElementById("portfolio-detail")
 
     const closeHamburger =()=>{
         hamburger.classList.remove("open")
@@ -180,6 +182,41 @@ const setEvents=()=>{
         bodyXModal.style.display="none"
     },250)
     })
+
+    calendarDOM.addEventListener("mouseover",()=>{
+        calendarDetail.style.opacity=1
+        calendarDetail.style.transform = "translateX(0px)"
+    })
+    calendarDOM.addEventListener("mouseleave",()=>{
+        calendarDetail.style.opacity=0
+        calendarDetail.style.transform = "translateX(-30px)"
+    })
+
+    countdownDOM.addEventListener("mouseover",()=>{
+        countdownDetail.style.opacity=1
+        countdownDetail.style.transform = "translateX(0px)"
+    })
+    countdownDOM.addEventListener("mouseleave",()=>{
+        countdownDetail.style.opacity=0
+        countdownDetail.style.transform = "translateX(-30px)"
+    })
+    gameFilterDOM.addEventListener("mouseover",()=>{
+        gameFilterDetail.style.opacity=1
+        gameFilterDetail.style.transform = "translateX(0px)"
+    })
+    gameFilterDOM.addEventListener("mouseleave",()=>{
+        gameFilterDetail.style.opacity=0
+        gameFilterDetail.style.transform = "translateX(-30px)"
+    })
+    portfolioDOM.addEventListener("mouseover",()=>{
+        portfolioDetail.style.opacity=1
+        portfolioDetail.style.transform = "translateX(0px)"
+    })
+    portfolioDOM.addEventListener("mouseleave",()=>{
+        portfolioDetail.style.opacity=0
+        portfolioDetail.style.transform = "translateX(-30px)"
+    })
+
 }
 const scroll= ()=>{
     const controller = new ScrollMagic.Controller()
@@ -242,7 +279,7 @@ gsap.to("#project-1",{
         toggleActions:"restart pause reverse pause",
         start:"top 50%",
         endTrigger:"#handyApp-header",
-        end:"top 75%",
+        end:"top 60%",
         scrub:true,
         markers:true,
     },
@@ -252,6 +289,7 @@ gsap.to("#project-1",{
 
 gsap.to("#project-2",{
     scrollTrigger:{
+        duration:"10%",
         trigger:"#handyApp-header",
         toggleActions:"restart pause reverse pause",
         start:"top 75%",
@@ -269,7 +307,7 @@ gsap.to("#project-2",{
         toggleActions:"restart pause reverse pause",
         start:"top 50%",
         endTrigger:"#fatPenguin-header",
-        end:"top 75%",
+        end:"top 60%",
         scrub:true,
         markers:true,
     },
@@ -296,7 +334,7 @@ gsap.to("#project-3",{
         toggleActions:"restart pause reverse pause",
         start:"top 50%",
         endTrigger:"#blackjack-header",
-        end:"top 75%",
+        end:"top 60%",
         scrub:true,
         markers:true,
     },
@@ -323,7 +361,7 @@ gsap.to("#project-4",{
         toggleActions:"restart pause reverse pause",
         start:"top 50%",
         endTrigger:"#bodyX-header",
-        end:"top 75%",
+        end:"top 60%",
         scrub:true,
         markers:true,
     },

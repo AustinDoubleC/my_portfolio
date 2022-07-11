@@ -56,7 +56,6 @@ $light-grey:#ddd;
             }
             #hamburger{
                 font-size: 1.5rem;
-                //padding: 0.5em 1rem 2rem 2rem;
                 height: 200px;
                 width: 200px;
                 border-bottom-left-radius: 100%;;
@@ -293,7 +292,8 @@ $light-grey:#ddd;
 #work-container{
     height: 500vh;
     display: flex;
-    margin-bottom: 6rem;
+    margin-bottom: 1rem;
+
     .work-display-outer{
         width: 60%;
         height: 100vh;
@@ -329,10 +329,16 @@ $light-grey:#ddd;
                     opacity: 1;
                     padding: 1rem;
                     border-radius: 2rem;
-                    h3,p, li{
+                    @media screen and (max-width:800px) {
+                        flex-direction: column;
+                    }
+                    h3,p,li{
                         font-size: 1rem;
                         margin-left: 1rem;
                         color: $primary-color;
+                        @media screen and (max-width:800px) {
+                            font-size: 0.8rem;
+                        }
                     }
                     li{
                         list-style:square;
@@ -342,6 +348,9 @@ $light-grey:#ddd;
                         width: 45%;
                         border-radius: 0.5rem;
                         //box-shadow: 5px 5px 2px 
+                        @media screen and (max-width:800px) {
+                            width: 65%;
+                        }
                     }
                 }
                 &.work-appear{
@@ -365,6 +374,12 @@ $light-grey:#ddd;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                #work-main-title{
+                    transform: translateY(-20vh);
+                    background-color: $primary-color;
+                    color: white;
+                    padding: 0.5rem 1rem;
+                }
             }
             .work-logo{
                 width: 100%;
@@ -429,8 +444,78 @@ $light-grey:#ddd;
         }
         
       }
+      
 }
 
+#others-container{
+    margin-bottom: 5rem;
+    h2{
+        color: white;
+        background-color: $primary-color;
+        width: 300px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0.5rem 0rem;
+    }
+    #others{
+        width: 85%;
+        max-width: 800px;
+        margin: 2rem auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+        
+        .other-container{
+            margin: 0 auto;
+            width: 250px;
+            height: 200px;
+            .other-detail{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                transition: all 0.5s;
+                transform: translateX(-30px);
+                opacity: 0;
+                h3,p,a{
+                    background-color: $primary-color;
+                    opacity: 0.8;
+                    width: 100%;
+                    text-align: center;
+                    color: white;
+                }
+                p{
+                    font-size: 0.8rem;
+                    padding: 0 0.5rem;
+                }
+                a{
+                    font-size: 1.5rem;
+                    &:hover,:active{
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+        #calendar{
+            background-image: url("./image/calendar.svg");
+            background-size: cover;
+        }
+        #countdown{
+            background-image: url("./image/countdown.svg");
+            background-size: cover;
+        }
+        #game-filter{
+            background-image: url("./image/game-filter.svg");
+            background-size: cover;
+        }
+        #portfolio{
+            background-image: url("./image/portfolio.svg");
+            background-size: cover;
+        }
+    }
+  }
 
 #contact-container{
     width: 100%;
