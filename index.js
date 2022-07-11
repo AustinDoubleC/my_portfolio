@@ -227,7 +227,6 @@ const scroll= ()=>{
         triggerHook:0,
     })
     .setPin(".work-display-outer")
-    .addIndicators()
     .addTo(controller)
     
     //show and hide hamburger
@@ -236,7 +235,6 @@ const scroll= ()=>{
         triggerHook:0.05,
     })
     .setClassToggle("#hamburger","show")
-    .addIndicators()
     .addTo(controller)
 
 }
@@ -268,7 +266,6 @@ gsap.to("#project-1",{
         endTrigger:"#fitnessPro-header",
         end:"top 25%",
         scrub:true,
-        markers:true,
     },
     opacity:1,
     y:0,
@@ -281,7 +278,6 @@ gsap.to("#project-1",{
         endTrigger:"#handyApp-header",
         end:"top 60%",
         scrub:true,
-        markers:true,
     },
     opacity:0,
     y:-100,
@@ -296,7 +292,6 @@ gsap.to("#project-2",{
         endTrigger:"#handyApp-header",
         end:"top 25%",
         scrub:true,
-        markers:true,
     },
     opacity:1,
     y:0,
@@ -309,7 +304,6 @@ gsap.to("#project-2",{
         endTrigger:"#fatPenguin-header",
         end:"top 60%",
         scrub:true,
-        markers:true,
     },
     opacity:0,
     y:-100,
@@ -323,7 +317,6 @@ gsap.to("#project-3",{
         endTrigger:"#fatPenguin-header",
         end:"top 25%",
         scrub:true,
-        markers:true,
     },
     opacity:1,
     y:0,
@@ -336,7 +329,6 @@ gsap.to("#project-3",{
         endTrigger:"#blackjack-header",
         end:"top 60%",
         scrub:true,
-        markers:true,
     },
     opacity:0,
     y:-100,
@@ -350,7 +342,6 @@ gsap.to("#project-4",{
         endTrigger:"#blackjack-header",
         end:"top 25%",
         scrub:true,
-        markers:true,
     },
     opacity:1,
     y:0,
@@ -363,7 +354,6 @@ gsap.to("#project-4",{
         endTrigger:"#bodyX-header",
         end:"top 60%",
         scrub:true,
-        markers:true,
     },
     opacity:0,
     y:-100,
@@ -377,7 +367,6 @@ gsap.to("#project-5",{
         endTrigger:"#bodyX-header",
         end:"top 25%",
         scrub:true,
-        markers:true,
     },
     opacity:1,
     y:0,
