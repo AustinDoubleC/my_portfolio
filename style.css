@@ -390,7 +390,7 @@
 }
 @media screen and (max-width: 800px) {
   #work-container .work-display-outer #work-display .work-detail .work-detail-parts .work-image {
-    width: 65%;
+    width: 75%;
   }
 }
 #work-container .work-display-outer #work-display .work-detail.work-appear {
