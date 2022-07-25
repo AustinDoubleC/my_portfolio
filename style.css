@@ -288,6 +288,7 @@
 }
 #about-container .about p {
   font-size: 1rem;
+  margin-top: 1rem;
 }
 @media screen and (max-width: 1000px) {
   #about-container .about p {
@@ -299,11 +300,11 @@
     font-size: 0.8rem;
   }
 }
-#about-container #HKStudy, #about-container #HK1, #about-container #HK2UK, #about-container #UK1 {
+#about-container #about-me {
   margin-left: 3rem;
 }
 @media screen and (max-width: 800px) {
-  #about-container #HKStudy, #about-container #HK1, #about-container #HK2UK, #about-container #UK1 {
+  #about-container #about-me {
     margin-left: 1rem;
   }
 }
