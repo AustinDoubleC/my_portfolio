@@ -7,7 +7,21 @@ const tl1 = gsap.timeline({ defaults: { ease: "slow" } });
     tl1.fromTo("#hero-motto", { opacity: 0,y:20 }, { opacity: 1,y:0, duration: 1},"-=1");
     tl1.fromTo("#nav-logo", { opacity: 0,y:-20 }, { opacity: 1,y:0, duration: 1},"-=0.5");
     tl1.fromTo("#nav-list", { opacity: 0,y:-20 }, { opacity: 1,y:0, duration: 1},"-=0.75");
-
+    
+    var ww = window.innerWidth, limit = 801;
+    var refresh = function() {
+      ww = window.innerWidth;
+      var w = ww < limit ? (location.reload(true)) :  ( ww > limit ? (location.reload(true)) : ww=limit );
+    }
+    var tOut;
+    window.onresize = function() {
+      var resW = window.innerWidth;
+      clearTimeout(tOut);
+      if ( (ww > limit && resW < limit) || (ww < limit && resW > limit) ) {
+        tOut = setTimeout(refresh, 100);
+      }
+    };
+    
 const setEvents=()=>{    
     const hamburger = document.getElementById("hamburger")
     const btnHamburger = document.getElementById("btn-hamburger")
