@@ -371,7 +371,7 @@ $light-grey:#ddd;
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             margin: 0 auto;
             @media screen and (max-width:800px) {
@@ -416,10 +416,11 @@ $light-grey:#ddd;
                         flex-direction: column;
                     }
                     img{
-                        margin: 0 auto 1rem;
+                        margin: auto 1rem;
                         width: 100%;
                         @media screen and (max-width:800px) {
                             width: 40%;
+                            margin: auto;
                         }
                         @media screen and (max-width:600px) {
                             width: 60%;
@@ -445,6 +446,18 @@ $light-grey:#ddd;
                 }
                 li{
                     list-style:inside;
+                }
+                .skills-list{
+                    margin-top: 1rem;
+                    display: flex;
+                    li{
+                        list-style: none;
+                        background-color: $primary-color;
+                        color: #fff;
+                        padding: 0.2rem 1rem;
+                        border-radius: 0.7rem;
+                        margin-right: 1rem;
+                    }
                 }
                 h3{
                     margin-top: 1rem;
