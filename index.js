@@ -1,5 +1,6 @@
 gsap.registerPlugin(ScrollTrigger)
 
+//animation for enterance
 const tl1 = gsap.timeline({ defaults: { ease: "slow" } });
     tl1.fromTo("#hero-img", { opacity: 0,y:50 }, { opacity: 1,y:0, duration: 1, delay:0.75});
     tl1.fromTo("#hero-title", { opacity: 0,y:20}, { opacity: 1,y:0, x:0,duration: 1},"-=0.5");
@@ -21,7 +22,7 @@ const tl1 = gsap.timeline({ defaults: { ease: "slow" } });
         tOut = setTimeout(refresh, 100);
       }
     };
-    
+// event listeners for click, mouseover
 const setEvents=()=>{    
     const hamburger = document.getElementById("hamburger")
     const btnHamburger = document.getElementById("btn-hamburger")
@@ -141,6 +142,7 @@ const setEvents=()=>{
     })
 
 }
+// scroll event for pin project left side and hamburger
 const scroll= ()=>{
     const controller = new ScrollMagic.Controller()
     //split Screen
@@ -168,7 +170,7 @@ const scroll= ()=>{
     .addTo(controller)
 
 }
-
+//animation for about me
 const tl2 = gsap.timeline();
 tl2.to("#about-me",{opacity:1})
 
@@ -182,6 +184,76 @@ ScrollTrigger.create({
     start:"top top",
     scrub:true,
     pin:true
+})
+
+gsap.to("#featured-outer",{
+    scrollTrigger:{
+        trigger:"#featured-outer"
+    },
+    opacity:1,
+    duration:1,
+    y:0
+})
+
+gsap.to("#body-x-container",{
+    scrollTrigger:{
+        trigger:"#body-x-container"
+    },
+    opacity:1,
+    duration:1,
+    y:0
+})
+gsap.to("#handy-app-container",{
+    scrollTrigger:{
+        trigger:"#handy-app-container"
+    },
+    opacity:1,
+    duration:1,
+    y:0
+})
+gsap.to("#fitness-pro-container",{
+    scrollTrigger:{
+        trigger:"#fitness-pro-container"
+    },
+    opacity:1,
+    duration:1,
+    y:0
+})
+gsap.to("#fat-penguin-container",{
+    scrollTrigger:{
+        trigger:"#fat-penguin-container"
+    },
+    opacity:1,
+    duration:1,
+    y:0
+})
+gsap.to("#blackjack-container",{
+    scrollTrigger:{
+        trigger:"#blackjack-container"
+    },
+    opacity:1,
+    duration:1,
+    y:0
+})
+
+
+
+gsap.to("#projects-container",{
+    scrollTrigger:{
+        trigger:"#projects-container"
+    },
+    opacity:1,
+    duration:1,
+    y:0
+})
+
+gsap.to("#contact-container",{
+    scrollTrigger:{
+        trigger:"#contact-container"
+    },
+    opacity:1,
+    duration:1,
+    y:0
 })
 
 scroll()
