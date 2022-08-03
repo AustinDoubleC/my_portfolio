@@ -7,10 +7,10 @@
 }
 
 #welcome {
-  background-image: linear-gradient(65deg, #202C4E, white, white, white);
   width: 100%;
   height: 100vh;
-  background-color: white;
+  background-color: #eee;
+  z-index: 1;
 }
 #welcome #nav-logo {
   font-family: "Lobster", cursive;
@@ -173,7 +173,7 @@
   }
 }
 #welcome #hero #hero-text-container {
-  width: 35%;
+  width: 45%;
   margin-left: 10%;
 }
 @media (max-width: 800px) {
@@ -209,11 +209,42 @@
     font-size: 1.3rem;
   }
 }
+#welcome #hero #hero-text-container #hero-title .my-name::after {
+  position: absolute;
+  background-color: #E9CB22;
+  content: "";
+  width: 150px;
+  height: 20px;
+  z-index: -1;
+  transform: translate(-100px, 45px);
+}
+@media screen and (max-width: 800px) {
+  #welcome #hero #hero-text-container #hero-title .my-name::after {
+    transform: translate(-75px, 25px);
+    width: 100px;
+    height: 15px;
+  }
+}
 #welcome #hero #hero-text-container #hero-text {
   letter-spacing: 1px;
   font-size: 1.2rem;
   line-height: 2rem;
   margin-top: 1rem;
+}
+#welcome #hero #hero-text-container #hero-text::before {
+  content: "";
+  position: absolute;
+  background-color: #6C63FF;
+  opacity: 0.1;
+  z-index: -1;
+  width: 400px;
+  height: 200px;
+  transform: translate(150px, -50px);
+}
+@media screen and (max-width: 800px) {
+  #welcome #hero #hero-text-container #hero-text::before {
+    display: none;
+  }
 }
 @media (max-width: 800px) {
   #welcome #hero #hero-text-container #hero-text {
@@ -228,9 +259,14 @@
 #welcome #hero #hero-text-container .cta-container {
   display: flex;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin-top: 1rem;
   opacity: 0;
+}
+@media screen and (max-width: 800px) {
+  #welcome #hero #hero-text-container .cta-container {
+    justify-content: center;
+  }
 }
 #welcome #hero #hero-text-container .cta-container #cta-hire {
   text-decoration: none;
@@ -262,6 +298,21 @@
 #welcome #hero #hero-text-container #hero-motto {
   margin-top: 1rem;
   font-size: 2rem;
+}
+#welcome #hero #hero-text-container #hero-motto::before {
+  position: absolute;
+  background-color: #E9CB22;
+  opacity: 0.2;
+  content: "";
+  width: 250px;
+  height: 150px;
+  z-index: -1;
+  transform: translate(400px, -25px);
+}
+@media screen and (max-width: 800px) {
+  #welcome #hero #hero-text-container #hero-motto::before {
+    display: none;
+  }
 }
 @media screen and (max-width: 800px) {
   #welcome #hero #hero-text-container #hero-motto {
