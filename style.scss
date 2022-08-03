@@ -213,6 +213,41 @@ $light-grey:#ddd;
                     font-size: 0.8rem;
                 }
             }
+            .cta-container{
+                display: flex;
+                width: 100%;
+                justify-content: flex-end;
+                margin-top: 1rem;
+                opacity: 0;
+                #cta-hire{
+                    text-decoration: none;
+                    background-color: $main-blue;
+                    width: 8rem;
+                    padding: 0.5rem 0;
+                    text-align: center;
+                    border-radius: 0.5rem;
+                    color: white;
+                    transition: all 0.25s;
+                    &:hover{
+                        transform: translateY(-5px);
+                    }
+                }
+                #cta-resume{
+                    border: $primary-color 1px solid;
+                    width: 8rem;
+                    text-align: center;
+                    padding: 0.5rem 0;
+                    border-radius: 0.5rem;
+                    margin-right: 1rem;
+                    text-decoration: none;
+                    color: $primary-color;
+                    transition: all 0.25s;
+                    &:hover{
+                        transform: translateY(-5px);
+                    }
+                }
+            }
+            
             #hero-motto{
                 margin-top: 1rem;
                 font-size: 2rem;

@@ -225,6 +225,40 @@
     font-size: 0.8rem;
   }
 }
+#welcome #hero #hero-text-container .cta-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  opacity: 0;
+}
+#welcome #hero #hero-text-container .cta-container #cta-hire {
+  text-decoration: none;
+  background-color: #6C63FF;
+  width: 8rem;
+  padding: 0.5rem 0;
+  text-align: center;
+  border-radius: 0.5rem;
+  color: white;
+  transition: all 0.25s;
+}
+#welcome #hero #hero-text-container .cta-container #cta-hire:hover {
+  transform: translateY(-5px);
+}
+#welcome #hero #hero-text-container .cta-container #cta-resume {
+  border: #202C4E 1px solid;
+  width: 8rem;
+  text-align: center;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #202C4E;
+  transition: all 0.25s;
+}
+#welcome #hero #hero-text-container .cta-container #cta-resume:hover {
+  transform: translateY(-5px);
+}
 #welcome #hero #hero-text-container #hero-motto {
   margin-top: 1rem;
   font-size: 2rem;

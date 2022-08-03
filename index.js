@@ -4,10 +4,11 @@ gsap.registerPlugin(ScrollTrigger)
 const tl1 = gsap.timeline({ defaults: { ease: "slow" } });
     tl1.fromTo("#hero-img", { opacity: 0,y:50 }, { opacity: 1,y:0, duration: 1, delay:0.75});
     tl1.fromTo("#hero-title", { opacity: 0,y:20}, { opacity: 1,y:0, x:0,duration: 1},"-=0.5");
-    tl1.fromTo("#hero-text", { opacity: 0,y:20 }, { opacity: 1,y:0, duration: 1},"-=0.25");
+    tl1.fromTo("#hero-text", { opacity: 0,y:20 }, { opacity: 1,y:0, duration: 1},"-=0.5");
     tl1.fromTo("#hero-motto", { opacity: 0,y:20 }, { opacity: 1,y:0, duration: 1},"-=1");
     tl1.fromTo("#nav-logo", { opacity: 0,y:-20 }, { opacity: 1,y:0, duration: 1},"-=0.5");
-    tl1.fromTo("#nav-list", { opacity: 0,y:-20 }, { opacity: 1,y:0, duration: 1},"-=0.75");
+    tl1.fromTo("#nav-list", { opacity: 0,y:-20 }, { opacity: 1,y:0, duration: 1},"-=1");
+    tl1.to(".cta-container", { opacity: 1,duration:1},"-=0.75");
     
     var ww = window.innerWidth, limit = 801;
     var refresh = function() {
